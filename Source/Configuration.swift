@@ -42,7 +42,6 @@ public struct Configuration {
 
   public var canRotateCamera = true
   public var collapseCollectionViewWhileShot = true
-  public var recordLocation = true
   public var allowMultiplePhotoSelection = true
   public var allowVideoSelection = false
   public var showsImageCountLabel = true

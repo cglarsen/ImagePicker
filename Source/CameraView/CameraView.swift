@@ -9,7 +9,7 @@ protocol CameraViewDelegate: class {
   func cameraNotAvailable()
 }
 
-class CameraView: UIViewController, CLLocationManagerDelegate, CameraManDelegate {
+class CameraView: UIViewController, CameraManDelegate {
 
   var configuration = Configuration()
 
@@ -93,7 +93,6 @@ class CameraView: UIViewController, CLLocationManagerDelegate, CameraManDelegate
   var previewLayer: AVCaptureVideoPreviewLayer?
   weak var delegate: CameraViewDelegate?
   var animationTimer: Timer?
-  var locationManager: LocationManager?
   var startOnFrontCamera: Bool = false
 
   private let minimumZoomFactor: CGFloat = 1.0
@@ -115,10 +114,6 @@ class CameraView: UIViewController, CLLocationManagerDelegate, CameraManDelegate
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    if configuration.recordLocation {
-      locationManager = LocationManager()
-    }
 
     view.backgroundColor = configuration.mainColor
 
@@ -143,12 +138,10 @@ class CameraView: UIViewController, CLLocationManagerDelegate, CameraManDelegate
     super.viewDidAppear(animated)
 
     previewLayer?.connection?.videoOrientation = .portrait
-    locationManager?.startUpdatingLocation()
   }
 
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
-    locationManager?.stopUpdatingLocation()
   }
 
   func setupPreviewLayer() {
@@ -227,7 +220,7 @@ class CameraView: UIViewController, CLLocationManagerDelegate, CameraManDelegate
         })
     })
 
-    cameraMan.takePhoto(previewLayer, location: locationManager?.latestLocation) {
+    cameraMan.takePhoto(previewLayer) {
       completion()
       self.delegate?.imageToLibrary()
     }
