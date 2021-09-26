@@ -11,7 +11,7 @@ import Photos
 
 open class ImagePickerController: UIViewController {
 
-  open var configuration = Configuration()
+  open var configuration = IPConfiguration()
 
   struct GestureConstants {
     static let maximumHeight: CGFloat = 200
@@ -91,7 +91,7 @@ open class ImagePickerController: UIViewController {
 
   // MARK: - Initialization
 
-  public init(configuration: Configuration? = nil) {
+  public init(configuration: IPConfiguration? = nil) {
     if let configuration = configuration {
       self.configuration = configuration
     }

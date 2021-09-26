@@ -23,7 +23,7 @@
 		D5DC59C41C201CC4003BD79B /* ImageStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC59AF1C201CC4003BD79B /* ImageStack.swift */; };
 		D5DC59C51C201CC4003BD79B /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC59B01C201CC4003BD79B /* StackView.swift */; };
 		D5DC59C61C201CC4003BD79B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC59B21C201CC4003BD79B /* CameraView.swift */; };
-		D5DC59C71C201CC4003BD79B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC59B31C201CC4003BD79B /* Configuration.swift */; };
+		D5DC59C71C201CC4003BD79B /* IPConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC59B31C201CC4003BD79B /* IPConfiguration.swift */; };
 		D5DC59C81C201CC4003BD79B /* ConstraintsSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC59B51C201CC4003BD79B /* ConstraintsSetup.swift */; };
 		D5DC59C91C201CC4003BD79B /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC59B71C201CC4003BD79B /* ImageGalleryView.swift */; };
 		D5DC59CA1C201CC4003BD79B /* ImageGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC59B81C201CC4003BD79B /* ImageGalleryViewCell.swift */; };
@@ -66,7 +66,7 @@
 		D5DC59AF1C201CC4003BD79B /* ImageStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStack.swift; sourceTree = "<group>"; };
 		D5DC59B01C201CC4003BD79B /* StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		D5DC59B21C201CC4003BD79B /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		D5DC59B31C201CC4003BD79B /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		D5DC59B31C201CC4003BD79B /* IPConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPConfiguration.swift; sourceTree = "<group>"; };
 		D5DC59B51C201CC4003BD79B /* ConstraintsSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsSetup.swift; sourceTree = "<group>"; };
 		D5DC59B71C201CC4003BD79B /* ImageGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryView.swift; sourceTree = "<group>"; };
 		D5DC59B81C201CC4003BD79B /* ImageGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewCell.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 				D25A8C2D1D4768250008D2F7 /* Helper.swift */,
 				D5DC59AC1C201CC4003BD79B /* BottomView */,
 				D5DC59B11C201CC4003BD79B /* CameraView */,
-				D5DC59B31C201CC4003BD79B /* Configuration.swift */,
+				D5DC59B31C201CC4003BD79B /* IPConfiguration.swift */,
 				D5DC59B41C201CC4003BD79B /* Extensions */,
 				D5DC59B61C201CC4003BD79B /* ImageGallery */,
 				D5DC59BA1C201CC4003BD79B /* ImagePickerController.swift */,
@@ -234,7 +234,6 @@
 				D5DC59871C201BE1003BD79B /* Frameworks */,
 				D5DC59881C201BE1003BD79B /* Headers */,
 				D5DC59891C201BE1003BD79B /* Resources */,
-				BDEA246A1CF1C0B5004D4642 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -326,22 +325,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BDEA246A1CF1C0B5004D4642 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		D5DC59861C201BE1003BD79B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -354,7 +337,7 @@
 				D25A8C2C1D47681E0008D2F7 /* ImageGalleryLayout.swift in Sources */,
 				D5DC59CA1C201CC4003BD79B /* ImageGalleryViewCell.swift in Sources */,
 				D5DC59C81C201CC4003BD79B /* ConstraintsSetup.swift in Sources */,
-				D5DC59C71C201CC4003BD79B /* Configuration.swift in Sources */,
+				D5DC59C71C201CC4003BD79B /* IPConfiguration.swift in Sources */,
 				D25A8C2E1D4768250008D2F7 /* Helper.swift in Sources */,
 				39D134101CAC4B4E00EA2ECE /* AssetManager.swift in Sources */,
 				D5DC59C21C201CC4003BD79B /* BottomContainerView.swift in Sources */,

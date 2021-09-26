@@ -14,7 +14,7 @@ open class BottomContainerView: UIView {
     static let height: CGFloat = 101
   }
 
-  var configuration = Configuration()
+  var configuration = IPConfiguration()
 
   lazy var pickerButton: ButtonPicker = { [unowned self] in
     let pickerButton = ButtonPicker(configuration: self.configuration)
@@ -65,7 +65,7 @@ open class BottomContainerView: UIView {
 
   // MARK: Initializers
 
-  public init(configuration: Configuration? = nil) {
+  public init(configuration: IPConfiguration? = nil) {
     if let configuration = configuration {
       self.configuration = configuration
     }
